@@ -6,7 +6,7 @@ import { analyzeFinancialData } from "./utils/geminiHelper";
 const App: React.FC = () => {
   const [analysisResult, setAnalysisResult] = useState<string>("");
 
-  const handleFormSubmit = async (data: any) => {
+  const handleFormSubmit = async (data: { income: number, expenses: number, savingsGoal: number }) => {
     try {
       const result = await analyzeFinancialData(data);
       setAnalysisResult(result);

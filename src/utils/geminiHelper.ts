@@ -48,6 +48,8 @@ export const analyzeFinancialData = async (data: DataInputInterface): Promise<st
 
     const result = await model.generateContent(prompt);
 
+    console.log("result -> ", result)
+
     const response = await result.response
     const text = response.text()
 
